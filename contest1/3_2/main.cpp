@@ -12,9 +12,9 @@ int BinarySearch(const int* arr, int n){
     while (left < right - 1){
         int mid = (left + right) / 2;
         if (arr[mid] < arr[mid + 1])
-            left = mid;
+            left = mid + 1;
         else
-            right = mid;
+            right = mid - 1;
     }
     if (arr[left] > arr[right])
         return left;
